@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Si7aTic</string>
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="settings">settings</string>
+    <string name="account">Account</string>
+    <string name="name">Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="number_of_children">NUMBER OF CHILDREN:</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save_changes">Save changes</string>
+    <string name="address">Address</string>
+    <string name="login">Login</string>
+</resources>

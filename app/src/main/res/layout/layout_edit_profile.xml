@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/loginCard"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/whiteCardColor"
+    tools:context=".EditProfileActivity"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:transitionName="layoutTransition"
+        android:id="@+id/m_edit_profile_relative_layout">
+    <LinearLayout
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+        <TextView
+            style="@style/headerTextPrimary"
+            android:text="@string/edit_profile"
+            android:transitionName="nameTransition"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/m_edit_profile_name"
+                style="@style/modifiedEditText"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:autofillHints="" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+
+            <EditText
+                android:id="@+id/m_edit_profile_mobile"
+                style="@style/modifiedEditText"
+                android:hint="@string/mobile_number"
+                android:transitionName="phoneTransition"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:autofillHints="" tools:targetApi="o"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/signup_text_margin_top">
+            <EditText
+                android:id="@+id/m_edit_profile_address"
+                style="@style/modifiedEditText"
+                android:hint="@string/address"
+                android:transitionName="AddressTransition"
+                android:inputType="textPostalAddress"
+                android:maxLines="1"
+                android:autofillHints="" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/m_edit_profile_save_btn"
+            style="@style/loginButton"
+            android:layout_gravity="center"
+            android:onClick="saveChanges"
+            android:text="@string/save_changes"
+            tools:ignore="OnClick" />
+    </LinearLayout></RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

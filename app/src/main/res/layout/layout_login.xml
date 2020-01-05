@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/loginCard"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/whiteCardColor"
+    context=".LoginActivity">
+    <LinearLayout
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+        <TextView
+            style="@style/headerTextPrimary"
+            android:id="@+id/m_layout_login_label"
+            android:text="@string/login"
+            android:transitionName="labelTransition"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/m_login_email"
+                style="@style/modifiedEditText"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:transitionName="emailTransition"
+                android:hint="@string/login_email_hint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/m_login_password"
+                style="@style/modifiedEditText"
+                android:hint="@string/login_password_hint"
+                android:transitionName="passwordTransition"
+                android:maxLines="1"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            style="@style/viewParent"
+            android:text="Forgot Password?"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/newsMoreTextSize"
+            android:layout_gravity="end"
+            android:onClick="viewForgotPAssword"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/m_login_button"
+            style="@style/loginButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:onClick="signIn"
+            android:transitionName="buttonTransition"
+            android:text="Login" />
+
+        <TextView
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:onClick="goToRegister"
+            android:text="@string/login_signup_hint"
+            android:textAlignment="center"
+
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

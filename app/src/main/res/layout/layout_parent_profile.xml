@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/loginCard"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:id="@+id/m_parent_card_view"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/whiteCardColor"
+    tools:context=".ParentProfileActivity">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:transitionName="layoutTransition"
+    android:id="@+id/m_parent_profile_relative_layout">
+    <LinearLayout
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:baselineAligned="false"
+        android:padding="@dimen/loginViewsMargin">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/m_parent_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/profile"
+            android:textAlignment="center"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="5dp" />
+
+        <TextView
+            style="@style/viewParent"
+            android:id="@+id/m_parent_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="Display Name"
+            android:transitionName="nameTransition"
+            android:textAlignment="center"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/headerTextSize" />
+
+        <TextView
+            style="@style/parent"
+            android:id="@+id/m_parent_number"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="PHONE:"
+            android:transitionName="phoneTransition"
+            android:textAlignment="textStart"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
+        <TextView
+            style="@style/parent"
+            android:id="@+id/m_parent_address"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="ADDRESS"
+            android:transitionName="AddressTransition"
+            android:textAlignment="textStart"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
+        <TextView
+            style="@style/parent"
+            android:id="@+id/m_parent_children"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="@string/number_of_children"
+            android:textAlignment="textStart"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/m_login_button"
+            style="@style/loginButton"
+            android:layout_width="145dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:onClick="handleEditProfile"
+            android:text="@string/edit_profile" />
+
+    </LinearLayout></RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
